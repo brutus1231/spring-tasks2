@@ -11,6 +11,8 @@ public class Main {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("context.xml");
 
+        BookService bookService = context.getBean(BookService.class);
+        System.out.println(bookService.countAllBooks());
         System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
     }
 }
